@@ -1,0 +1,45 @@
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider-image-container {
+  position: relative;
+  /*display: inline-block;*/
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.prev-button,
+.next-button {
+  border-radius: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin: 10px;
+  transform: translateY(-50%);
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: #000000;
+}

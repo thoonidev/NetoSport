@@ -1,0 +1,118 @@
+/* Estilos del formulario */
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  width: 90%;
+  margin:0 auto;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.form-content {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  flex: 1;
+  margin-left: 20px;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 100%;
+  margin-top: 25px;
+}
+
+.side-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.form-group input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 26, 255, 0.884);
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.form-content button {
+  padding: 10px 20px;
+  background-color: #013686;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.form-content button:hover {
+  background-color: #0400ff;
+}
+
+.mensaje-confirmacion {
+  transform: rotate(-90deg);
+  width: 3%;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mensaje-confirmacion p {
+  color: #000000;
+  box-shadow: 0 0 5px rgba(0, 255, 234, 0.884);
+  background-color: rgb(0, 255, 157);
+  border-radius: 10px;
+  margin: 0px;
+}
+
+@media screen and (max-width: 991px) {
+  .mensaje-confirmacion {
+    order: -1;
+  }
+
+  .form-content {
+    order: -1;
+  }
+
+  .mensaje-confirmacion {
+    transform: none;
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .mensaje-confirmacion p {
+    border-radius: 10px;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .form-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-content,
+  .image-container {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .image-container {
+    margin-bottom: 20px;
+  }
+}

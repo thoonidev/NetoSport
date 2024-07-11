@@ -1,0 +1,26 @@
+
+.busqueda {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  border: 1px solid #004a61;
+  border-radius: 50px;
+  padding: 10px;
+  margin-top: 5rem;
+}
+
+.search-icon {
+  margin-right: 8px;
+}
+
+.busqueda input {
+  border: none;
+  outline: none;
+  flex: 1;
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 1rem;
+  box-shadow: 0 0 5px rgba(0, 255, 242, 0.884);
+}
+
