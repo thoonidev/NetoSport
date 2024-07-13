@@ -24,3 +24,10 @@
   box-shadow: 0 0 5px rgba(0, 255, 242, 0.884);
 }
 
+@media screen and (max-width: 991px) {
+  .busqueda {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+

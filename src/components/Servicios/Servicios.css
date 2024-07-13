@@ -54,3 +54,16 @@
     padding: 2rem;
   }
 }
+
+@media screen and (max-width: 360px) {
+  .card-feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+  }
+}
