@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# 🏆 Neto Sport
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Neto Sport** es una tienda en línea especializada en productos deportivos relacionados con el **fútbol**, desarrollada con **React** mediante **Create React App** para ofrecer una experiencia rápida, moderna y dinámica a los usuarios.  
+El proyecto combina diseño, rendimiento y funcionalidad en un entorno de comercio electrónico enfocado en los amantes del fútbol.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Tecnologías utilizadas
 
-### `npm start`
+- ⚛️ **React (Create React App)** – Biblioteca principal para la creación de interfaces dinámicas y modulares.  
+- 💅 **CSS / Styled Components** – Para el diseño visual y personalización de componentes.  
+- 🌐 **React Router DOM** – Navegación entre las diferentes secciones del sitio.  
+- 🔎 **React Hooks (useState, useEffect)** – Manejo del estado y lógica interna.  
+- 📦 **Node.js & npm** – Entorno de ejecución y gestión de dependencias.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛍️ Descripción general
 
-### `npm test`
+**Neto Sport** ofrece una interfaz amigable e intuitiva para la exploración de productos deportivos enfocados en el fútbol.  
+El sitio está diseñado para brindar **rapidez, modularidad y optimización SEO**, características esenciales en un entorno competitivo de comercio electrónico.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📄 Secciones del sitio
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🏠 Página principal
+- Presenta las **ofertas vigentes**, **productos destacados**, **más vendidos** y las **últimas tendencias** del fútbol.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🏢 Información de la tienda
+- Expone el **propósito**, **misión**, **visión** y **valores** de **Neto Sport**.  
+- Muestra las **marcas aliadas** con las que trabaja la tienda para garantizar productos de calidad.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### ⚽ Sección de productos
+- Ofrece una **gran variedad de productos futbolísticos**, desde camisetas hasta accesorios y equipamiento.  
+- Cada producto permite **añadir al carrito**, para simular el monto total a pagar.  
+- Incluye un **buscador de productos**, mejorando la experiencia y alcance de búsqueda.
 
-### `npm run eject`
+### 💬 Sección de consultas
+- Formulario con **validación de datos** para recibir consultas o sugerencias de los usuarios.  
+- Ayuda a recopilar información valiosa para futuras mejoras y optimización del sitio.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📈 Vista del proyecto
+![DEW2_PROYECTO](https://github.com/user-attachments/assets/5b57f817-a8c0-4b39-898f-474bc590effe)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ⚙️ Instalación y ejecución local
 
-## Learn More
+1. **Clona este repositorio**
+   ```bash
+   git clone https://github.com/thoonidev/NetoSport.git
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
