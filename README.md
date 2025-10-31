@@ -55,9 +55,10 @@ El sitio está diseñado para brindar **rapidez, modularidad y optimización SEO
 
 ---
 
--cd NetoSport
--npm install
--npm start
+### ⚽ Ejecutar lo sgte
+- cd NetoSport
+- npm install
+- npm start
 
 ---
    
