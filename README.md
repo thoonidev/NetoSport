@@ -53,3 +53,12 @@ El sitio está diseñado para brindar **rapidez, modularidad y optimización SEO
    ```bash
    git clone https://github.com/thoonidev/NetoSport.git
 
+---
+
+-cd NetoSport
+-npm install
+-npm start
+
+---
+   
+
