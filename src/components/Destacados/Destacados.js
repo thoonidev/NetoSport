@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import destacadoImage01 from "../../images/destacado01.png";
 import destacadoImage001 from "../../images/destacado001.png";
 import destacadoImage02 from "../../images/destacado02.png";
@@ -8,7 +8,7 @@ import destacadoImage003 from "../../images/destacado003.png";
 import destacadoImage04 from "../../images/destacado04.png";
 import destacadoImage004 from "../../images/destacado004.png";
 import "./Destacados.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const DestacadoItem = ({
   image,
@@ -17,7 +17,7 @@ const DestacadoItem = ({
   description,
   price,
   openLightbox,
-  onAddProduct,
+  onViewDetails,
 }) => {
   return (
     <div className="ofert-1" data-id={id}>
@@ -26,22 +26,17 @@ const DestacadoItem = ({
         <h3>{nameProduct}</h3>
         <p>{description}</p>
         <p className="precio">{price}</p>
-        <button className="agregar-carrito btn-3" onClick={onAddProduct}>
-          Agregar
+        <button className="agregar-carrito btn-3" onClick={onViewDetails}>
+          Ver detalles
         </button>
       </div>
     </div>
   );
 };
 
-const Destacados = ({
-  allProducts,
-  setAllProducts,
-  countProducts,
-  setCountProducts,
-  total,
-  setTotal,
-}) => {
+const Destacados = () => {
+  
+  const navigate = useNavigate();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxImage, setLightboxImage] = useState("");
 
@@ -55,23 +50,9 @@ const Destacados = ({
     setLightboxImage("");
   };
 
-  const onAddProduct = (product) => {
-    if (allProducts.find((item) => item.id === product.id)) {
-      const products = allProducts.map((item) =>
-        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-      );
-      setTotal(total + product.price * 1);
-      setCountProducts(countProducts + 1);
-      return setAllProducts([...products]);
-    }
-
-    setTotal(total + product.price * 1);
-    setCountProducts(countProducts + 1);
-    setAllProducts([...allProducts, { ...product, quantity: 1 }]);
-  };
-
   return (
-    <section className="oferts container" id="lista-1">
+    /*<section className="oferts container" id="lista-1">*/
+    <section className="oferts " id="lista-1">
       <h2>Productos Destacados</h2>
       <p>En NetoSport tenemos variedad de productos</p>
 
@@ -94,13 +75,7 @@ const Destacados = ({
           description="Calidad premium"
           price="S/.400"
           openLightbox={() => openLightbox(destacadoImage001)}
-          onAddProduct={() =>
-            onAddProduct({
-              nameProduct: "BOTA NIKE PHANTOM GT2",
-              price: 400,
-              id: 1,
-            })
-          }
+          onViewDetails={() => navigate(`/producto/1`)}
         />
 
         <DestacadoItem
@@ -110,13 +85,7 @@ const Destacados = ({
           description="Calidad premium"
           price="S/.200"
           openLightbox={() => openLightbox(destacadoImage002)}
-          onAddProduct={() =>
-            onAddProduct({
-              nameProduct: "GUANTES PREDATOR",
-              price: 200,
-              id: 2,
-            })
-          }
+          onViewDetails={() => navigate(`/producto/2`)}
         />
 
         <div className="logan-1">
@@ -144,13 +113,7 @@ const Destacados = ({
           description="Calidad premium"
           price="S/.100"
           openLightbox={() => openLightbox(destacadoImage003)}
-          onAddProduct={() =>
-            onAddProduct({
-              nameProduct: "ESPINILLERAS MERCURIAL",
-              price: 100,
-              id: 3,
-            })
-          }
+          onViewDetails={() => navigate(`/producto/3`)}
         />
 
         <DestacadoItem
@@ -160,13 +123,7 @@ const Destacados = ({
           description="Calidad premium"
           price="S/.400"
           openLightbox={() => openLightbox(destacadoImage004)}
-          onAddProduct={() =>
-            onAddProduct({
-              nameProduct: "NIKE PHANTOM LUNA FG",
-              price: 400,
-              id: 4,
-            })
-          }
+          onViewDetails={() => navigate(`/producto/4`)}
         />
       </div>
     </section>

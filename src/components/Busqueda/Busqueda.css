@@ -1,33 +1,103 @@
-
+/* Contenedor de búsqueda */
 .busqueda {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 600px;
+  width: 90%;
+  margin: 5rem auto 2rem;
   display: flex;
   align-items: center;
-  border: 1px solid #004a61;
+  background-color: #0a0a0a; /* fondo oscuro profesional */
+  border: 2px solid #14c6d3; /* borde vibrante deportivo */
   border-radius: 50px;
-  padding: 10px;
-  margin-top: 5rem;
+  padding: 10px 20px;
+  box-shadow: 0 4px 15px rgba(20, 198, 211, 0.5);
+  transition: all 0.3s;
 }
 
+.busqueda:hover {
+  box-shadow: 0 6px 20px rgba(61, 224, 148, 0.6); /* efecto hover */
+  border-color: #5fcca2; /* cambio de color al pasar el mouse */
+}
+
+/* Icono de búsqueda */
 .search-icon {
-  margin-right: 8px;
+  color: #14c6d3;
+  font-size: 1.3rem;
+  margin-right: 10px;
+  transition: color 0.3s, transform 0.3s;
 }
 
+.busqueda:hover .search-icon {
+  color: #5fcca2;
+  transform: scale(1.2); /* efecto zoom en hover */
+}
+
+/* Input de búsqueda */
 .busqueda input {
   border: none;
   outline: none;
   flex: 1;
   border-radius: 50px;
-  padding: 10px;
+  padding: 12px 15px;
   font-size: 1rem;
-  box-shadow: 0 0 5px rgba(0, 255, 242, 0.884);
+  background-color: #121212;
+  color: #ffffff;
+  transition: all 0.3s;
 }
 
+.busqueda input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+.busqueda input:focus {
+  box-shadow: 0 6px 20px rgba(61, 184, 206, 0.6);
+  border-color: #6bd3e6;
+}
+
+/* RESPONSIVO: tablets y pantallas medianas */
 @media screen and (max-width: 991px) {
   .busqueda {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 3rem 1rem 2rem;
+  }
+
+  .search-icon {
+    font-size: 1.2rem;
+  }
+
+  .busqueda input {
+    font-size: 0.95rem;
+    padding: 10px 12px;
   }
 }
 
+/* RESPONSIVO: móviles 480px */
+@media screen and (max-width: 480px) {
+  .busqueda {
+    padding: 8px 12px;
+  }
+
+  .search-icon {
+    font-size: 1.1rem;
+  }
+
+  .busqueda input {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+}
+
+/* RESPONSIVO: muy pequeño 320px */
+@media screen and (max-width: 320px) {
+  .busqueda {
+    padding: 6px 10px;
+  }
+
+  .search-icon {
+    font-size: 1rem;
+  }
+
+  .busqueda input {
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+}

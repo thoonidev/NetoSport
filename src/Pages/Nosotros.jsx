@@ -1,31 +1,17 @@
-import React, { useState } from "react";
 import qsImage01 from "../images/calidad.jpg";
 import qsImage02 from "../images/mision.jpg";
 import qsImage03 from "../images/vision.jpg";
-import Menu from "../components/Menu/Menu";
 import Promocion from "../components/Promocion/Promocion";
 import Marcas from "../components/Marcas/Marcas";
 import Galeria from "../components/Galeria/Galeria";
 import Servicios from "../components/Servicios/Servicios";
 
 export const Nosotros = () => {
-  const [allProducts, setAllProducts] = useState([]);
-  const [total, setTotal] = useState(0);
-  const [countProducts, setCountProducts] = useState(0);
   return (
     <>
-      <Menu
-        allProducts={allProducts}
-        setAllProducts={setAllProducts}
-        total={total}
-        countProducts={countProducts}
-        setCountProducts={setCountProducts}
-        setTotal={setTotal}
-      />
-
       <Promocion
         imagenURL={qsImage01}
-        titulo="Compromiso con la Calidad"
+        titulo="Sobre Nosotros"
         texto="En Neto Sport, la calidad es nuestra prioridad número uno. Seleccionamos cuidadosamente cada producto que ofrecemos en nuestra tienda para asegurarnos de que cumple con los estándares más altos de durabilidad y rendimiento. Trabajamos con las principales marcas de la industria para garantizar que nuestros clientes tengan acceso a los últimos avances en tecnología y diseño en el mundo del fútbol."
         mostrarBoton={false}
       />

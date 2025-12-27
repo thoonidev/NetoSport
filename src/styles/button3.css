@@ -1,0 +1,15 @@
+.btn-3 {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #00ff87, #00c853);
+  color: #000;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-3:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(0, 255, 135, 0.8);
+}

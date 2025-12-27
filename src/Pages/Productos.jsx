@@ -1,46 +1,70 @@
-import React, { useState } from "react";
-import Menu from "../components/Menu/Menu";
+import { useState } from "react";
 import Vendidos from "../components/Vendidos/Vendidos";
 import { data01 } from "../components/Productos/data01";
+
 import Busqueda from "../components/Busqueda/Busqueda";
+import "./Productos.css";
 
 export const Productos = () => {
-  const [allProducts, setAllProducts] = useState([]);
-  const [total, setTotal] = useState(0);
-  const [countProducts, setCountProducts] = useState(0);
+  
   const [filteredProductList, setFilteredProductList] = useState(data01);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
 
   const handleFilterProducts = (filteredProducts) => {
     setFilteredProductList(filteredProducts);
+    setCurrentPage(1); // Reset to first page when filtering
+  };
+
+  const totalPages = Math.ceil(filteredProductList.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedProducts = filteredProductList.slice(startIndex, endIndex);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  const handlePrev = () => {
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
+  };
+
+  const handleNext = () => {
+    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
   };
 
   return (
     <>
-      <Menu
-        allProducts={allProducts}
-        setAllProducts={setAllProducts}
-        total={total}
-        countProducts={countProducts}
-        setCountProducts={setCountProducts}
-        setTotal={setTotal}
-      />
-
       <Busqueda
-        productList={data01}
+         productList={data01}
         setFilteredProductList={handleFilterProducts}
       />
 
       <Vendidos
         title="Nuestros Productos"
         description="Ofrecemos productos con la mejor calidad"
-        productList={filteredProductList}
-        allProducts={allProducts}
-        setAllProducts={setAllProducts}
-        total={total}
-        countProducts={countProducts}
-        setCountProducts={setCountProducts}
-        setTotal={setTotal}
+        productList={paginatedProducts}
       />
+
+      {totalPages > 1 && (
+        <div className="pagination">
+          <button onClick={handlePrev} disabled={currentPage === 1}>
+            Anterior
+          </button>
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+            <button
+              key={page}
+              onClick={() => handlePageChange(page)}
+              className={page === currentPage ? "active" : ""}
+            >
+              {page}
+            </button>
+          ))}
+          <button onClick={handleNext} disabled={currentPage === totalPages}>
+            Siguiente
+          </button>
+        </div>
+      )}
     </>
   );
 };

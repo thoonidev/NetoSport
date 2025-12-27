@@ -1,4 +1,3 @@
-import React from "react";
 import "./Promocion.css";
 import { NavLink } from "react-router-dom";
 
@@ -11,7 +10,7 @@ const Promocion = ({ imagenURL, titulo, texto, mostrarBoton = true }) => {
           <p>{texto}</p>
           {mostrarBoton && (
             <NavLink to="/nosotros" className="btn-1">
-              Informacion
+              INFORMACION
             </NavLink>
           )}
         </div>

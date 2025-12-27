@@ -1,0 +1,28 @@
+/* BOTÓN */
+.btn-1 {
+  display: inline-block;
+  padding: 14px 35px;
+  background: linear-gradient(90deg, #00ff87, #00c853);
+  color: #000;
+  font-weight: 800;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 135, 0.6);
+}
+
+.btn-1:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #00c853, #00ff87);
+  box-shadow: 0 0 25px rgba(0, 255, 135, 0.9);
+}
+
+@media (max-width: 480px) {
+  .cover-txt h1 {
+    font-size: 2rem;
+  }
+
+  .btn-1 {
+    padding: 12px 25px;
+  }
+}

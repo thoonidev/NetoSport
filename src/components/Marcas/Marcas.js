@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Marcas.css";
 import marcaImage1 from "../../images/adidas.jpg";
 import marcaImage01 from "../../images/mizuno.png";

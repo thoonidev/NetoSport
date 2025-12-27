@@ -1,0 +1,175 @@
+
+/* Contenedor principal */
+.carrito-page {
+  padding: 20px;
+  max-width: 900px;
+  margin: 40px auto; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #e6f7f1;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.carrito-page h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #0a6f4a; 
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* Lista de productos */
+.carrito-products {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Producto individual */
+.carrito-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff; 
+  border-left: 5px solid #00b894; 
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.carrito-product:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen del producto */
+.carrito-product img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+/* Información del producto */
+.carrito-product-info {
+  flex: 1;
+}
+
+.carrito-product-info h3 {
+  margin: 0 0 5px 0;
+  color: #00796b;
+}
+
+.carrito-product-info p {
+  margin: 2px 0;
+  color: #555;
+}
+
+/* Icono de eliminar */
+.icon-close {
+  cursor: pointer;
+  color: #e74c3c;
+  font-size: 1.3rem;
+  transition: color 0.2s;
+}
+
+.icon-close:hover {
+  color: #c0392b;
+}
+
+/* Total del carrito */
+.carrito-total {
+  margin-top: 30px;
+  text-align: center;
+  background: #00cec9; 
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.carrito-total h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+}
+
+/* Botón de vaciar carrito */
+.btn-clear-all {
+  background-color: #00b894;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.btn-clear-all:hover {
+  background-color: #009c7a;
+}
+
+/* Carrito vacío */
+.cart-empty {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  padding: 30px 0;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Para tablet y móviles grandes */
+@media (max-width: 768px) {
+
+  .carrito-page {
+    margin: 30px 15px; 
+  }
+
+  .carrito-product {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .carrito-product img {
+    margin-bottom: 10px;
+  }
+
+  .icon-close {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+}
+
+/* Para móviles pequeños (320px) */
+@media (max-width: 480px) {
+  .carrito-page {
+    padding: 15px;
+    margin: 20px 10px;
+    border-radius: 12px;
+    
+  }
+
+  .carrito-product img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .carrito-product-info h3 {
+    font-size: 1rem;
+  }
+
+  .carrito-product-info p {
+    font-size: 0.9rem;
+  }
+
+  .btn-clear-all {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .carrito-total h3 {
+    font-size: 1.2rem;
+  }
+}

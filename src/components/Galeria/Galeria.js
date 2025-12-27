@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Galeria.css";
 import galleryImage1 from "../../images/galeria1.jpg";
 import galleryImage01 from "../../images/galeria01.jpg";

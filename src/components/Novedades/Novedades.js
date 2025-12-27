@@ -1,20 +1,27 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import novedadImage01 from "../../images/novedad1.jpg";
 import novedadImage02 from "../../images/novedad2.jpg";
 import novedadImage03 from "../../images/novedad3.jpg";
 import "./Novedades.css";
 
 const Novedades = () => {
+  const [modalOpen, setModalOpen] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
 
   const handleVideoClick = (url) => {
     setVideoUrl(url);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setVideoUrl("");
   };
 
   return (
     <section className="blog container">
       <h2>Ultimas Novedades</h2>
-      <p>Te traemos las ultimas novedades del deporte rey.</p>
+      <p>Te traemos las ultimas novedades del deporte rey</p>
 
       <div className="blog-content">
         <div className="blog-1">
@@ -87,16 +94,22 @@ const Novedades = () => {
         </div>
       </div>
 
-      {videoUrl && (
-        <div className="video-container">
-          <iframe
-            title="Las Ultimas Novedades"
-            width="560"
-            height="315"
-            src={`${videoUrl}?autoplay=1&controls=0&loop=1&rel=0&showinfo=0&mute=1`}
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
+      {/* MODAL VIDEO */}
+      {modalOpen && (
+        <div className="video-modal-overlay" onClick={closeModal}>
+          <div className="video-modal-content" onClick={(e) => e.stopPropagation()}>
+            <iframe
+              title="Presentacion"
+              width="800"
+              height="450"
+              src={`${videoUrl}?autoplay=1&controls=1&rel=0`}
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
+            <button className="close-modal-btn" onClick={closeModal}>
+              ×
+            </button>
+          </div>
         </div>
       )}
     </section>

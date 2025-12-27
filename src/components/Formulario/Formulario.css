@@ -1,118 +1,187 @@
-/* Estilos del formulario */
+/* Contenedor general */
 .form-container {
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 1200px;
   width: 90%;
-  margin:0 auto;
+  margin: 5rem auto;
   flex-wrap: wrap;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  gap: 40px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.form-content {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  flex: 1;
-  margin-left: 20px;
-}
-
+/* Imagen lateral */
 .image-container {
   flex: 1;
   max-width: 100%;
-  margin-top: 25px;
 }
 
 .side-image {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+}
+
+.side-image:hover {
+  transform: scale(1.03);
+}
+
+/* Formulario */
+.form-content {
+  flex: 1;
+  min-width: 300px;
+  background-color: #0a0a0a;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
 }
 
 .form-group {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 10px;
-  font-size: 20px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 .form-group input[type="text"],
 textarea {
   width: 100%;
-  padding: 10px;
-  box-shadow: 0 0 5px rgba(0, 26, 255, 0.884);
+  padding: 12px;
+  font-size: 16px;
   border-radius: 10px;
-  font-size: 20px;
+  border: 2px solid #14c6d3;
+  outline: none;
+  background-color: #121212;
+  color: #ffffff;
+  box-sizing: border-box;
+  transition: all 0.3s;
 }
 
+.form-group input[type="text"]:focus,
+textarea:focus {
+  border-color: #4ebd92;
+  box-shadow: 0 0 10px rgba(76, 231, 97, 0.5);
+}
+
+/* Botón enviar */
 .form-content button {
-  padding: 10px 20px;
-  background-color: #013686;
+  padding: 12px 25px;
+  background-color: #14c6d3;
   color: #fff;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s;
 }
 
 .form-content button:hover {
-  background-color: #0400ff;
+  background-color: #4ebd92;
+  transform: scale(1.05);
 }
 
+/* Mensaje de confirmación */
 .mensaje-confirmacion {
-  transform: rotate(-90deg);
-  width: 3%;
-  white-space: nowrap;
+  width: 100%;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .mensaje-confirmacion p {
-  color: #000000;
-  box-shadow: 0 0 5px rgba(0, 255, 234, 0.884);
-  background-color: rgb(0, 255, 157);
-  border-radius: 10px;
-  margin: 0px;
+  color: #ffffff;
+  background-color: #14c6d3;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(20, 198, 211, 0.6);
+  transition: all 0.3s;
 }
 
+.mensaje-confirmacion p:hover {
+  transform: scale(1.02);
+}
+
+/* RESPONSIVO: Tablets y pantallas medianas */
 @media screen and (max-width: 991px) {
-  .mensaje-confirmacion {
-    order: -1;
-  }
-
-  .form-content {
-    order: -1;
-  }
-
-  .mensaje-confirmacion {
-    transform: none;
-    width: 100%;
-    margin-top: 0px;
-  }
-
-  .mensaje-confirmacion p {
-    border-radius: 10px;
-    margin: 10px auto;
-    text-align: center;
-  }
-
   .form-container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .form-content,
   .image-container {
     width: 100%;
-    margin-left: 0;
+    margin: 0;
   }
 
   .image-container {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+  }
+}
+
+/* RESPONSIVO: Móviles (480px) */
+@media screen and (max-width: 480px) {
+  .form-content {
+    padding: 25px 20px;
+  }
+
+  .form-group label {
+    font-size: 16px;
+  }
+
+  .form-group input[type="text"],
+  textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .form-content button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .mensaje-confirmacion p {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* RESPONSIVO: Pantallas muy pequeñas (320px) */
+@media screen and (max-width: 320px) {
+  .form-content {
+    padding: 15px 10px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input[type="text"],
+  textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .form-content button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .mensaje-confirmacion p {
+    font-size: 12px;
+    padding: 8px 15px;
   }
 }

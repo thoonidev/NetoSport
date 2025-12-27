@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo } from "react";
 import bannerImage4 from "../../images/banner4.jpg";
 import bannerImage3 from "../../images/banner3.jpg";
 import bannerImage2 from "../../images/banner2.jpg";
@@ -8,26 +8,7 @@ import { NavLink } from "react-router-dom";
 
 const Ofertas = () => {
   const [textColor, setTextColor] = useState("black");
-
-  function parpadear() {
-    let r = Math.floor(Math.random() * 240);
-    let g = Math.floor(Math.random() * 240);
-    let b = Math.floor(Math.random() * 240);
-    setTextColor(`rgb(${r}, ${g}, ${b})`);
-  }
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      parpadear();
-    }, 1000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
-  const [currentBanner, setCurrentBanner] = useState(1);
-  const bannerRef = useRef(null);
+  const [currentBanner, setCurrentBanner] = useState(0);
 
   const banners = useMemo(
     () => [bannerImage1, bannerImage2, bannerImage3, bannerImage4],
@@ -36,19 +17,21 @@ const Ofertas = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentBanner((prevBanner) => (prevBanner % banners.length) + 1);
-    }, 2000);
+      setTextColor(
+        `rgb(${Math.random() * 240}, ${Math.random() * 240}, ${Math.random() * 240})`
+      );
+    }, 1000);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [banners.length]);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
-    if (bannerRef.current) {
-      bannerRef.current.src = banners[currentBanner - 1];
-    }
-  }, [currentBanner, banners]);
+    const interval = setInterval(() => {
+      setCurrentBanner((prev) => (prev + 1) % banners.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [banners.length]);
 
   return (
     <section>
@@ -62,7 +45,7 @@ const Ofertas = () => {
             </NavLink>
           </div>
           <div className="cover-img">
-            <img src={banners[0]} alt="bannersf" ref={bannerRef} />
+            <img src={banners[currentBanner]} alt="bannersf" />
           </div>
         </div>
       </div>

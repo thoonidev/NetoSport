@@ -1,94 +1,104 @@
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* SECCIÓN PRINCIPAL */
 .sec__cover {
+  width: 100%;
+  min-height: 90vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("../../images/galeria03.jpg");
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
-  min-height: 0vh;
-  padding: 70px 0;
 }
 
+/* CONTENEDOR */
 .cover {
   display: flex;
   align-items: center;
-  flex: 1;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
+/* TEXTO */
 .cover-txt {
-  flex-basis: 40%;
+  max-width: 500px;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
 .cover-txt h1 {
-  font-size: 60px;
-  line-height: 1;
-  color: #181818;
-  text-transform: uppercase;
-  margin-bottom: 25px;
+  font-size: 3.2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(0, 255, 100, 0.6);
 }
 
 .cover-txt p {
-  color: #000879;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 25px;
-  text-align: justify;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+  color: #dcdcdc;
 }
 
+/* IMAGEN */
 .cover-img {
-  flex-basis: 60%;
+  max-width: 500px;
+  position: relative;
 }
 
 .cover-img img {
   width: 100%;
-}
-
-.btn-1 {
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px 30px;
-  color: #000879;
-  border: 2px solid #000879;
-  text-transform: capitalize;
   border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 255, 135, 0.4);
+  animation: zoom 6s infinite alternate ease-in-out;
 }
 
-.btn-1:hover {
-  color: #ffffff;
-  background-color: #000879;
-}
-
-@media screen and (max-width: 991px) {
-  .sec__cover {
-    min-height: 0vh;
-    padding: 50px 10px 50px 10px;
+/* ANIMACIÓN */
+@keyframes zoom {
+  from {
+    transform: scale(1);
   }
+  to {
+    transform: scale(1.08);
+  }
+}
 
+/* RESPONSIVE */
+@media (max-width: 900px) {
   .cover {
     flex-direction: column;
     text-align: center;
   }
 
-  .cover-txt {
-    margin-bottom: 25px;
+  .cover-txt h1 {
+    font-size: 2.5rem;
   }
 
   .cover-txt p {
-    text-align: center;
+  text-align: center;
+}
+
+  .cover-img {
+    max-width: 350px;
   }
 }
 
-@media screen and (max-width: 390px) {
+@media (max-width: 480px) {
   .cover-txt h1 {
-    font-size: 50px;
-    line-height: 1;
-    color: #181818;
-    text-transform: uppercase;
-    margin-bottom: 25px;
+    font-size: 2rem;
   }
 }
 

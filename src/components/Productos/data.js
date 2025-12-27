@@ -10,8 +10,52 @@ import lmvImage05 from "../../images/lmvendido05.png";
 import lmvImage005 from "../../images/lmvendido005.png";
 import lmvImage06 from "../../images/lmvendido06.png";
 import lmvImage006 from "../../images/lmvendido006.png";
+import destacadoImage01 from "../../images/destacado01.png";
+import destacadoImage001 from "../../images/destacado001.png";
+import destacadoImage02 from "../../images/destacado02.png";
+import destacadoImage002 from "../../images/destacado002.png";
+import destacadoImage03 from "../../images/destacado03.png";
+import destacadoImage003 from "../../images/destacado003.png";
+import destacadoImage04 from "../../images/destacado04.png";
+import destacadoImage004 from "../../images/destacado004.png";
 
 export const data = [
+  {
+    id: 1,
+    img: destacadoImage01,
+    openligthbox: destacadoImage001,
+    nameProduct: "BOTA NIKE PHANTOM GT2",
+    description: "Calidad premium",
+    price: 400,
+    quantity: 1,
+  },
+  {
+    id: 2,
+    img: destacadoImage02,
+    openligthbox: destacadoImage002,
+    nameProduct: "GUANTES PREDATOR",
+    description: "Calidad premium",
+    price: 200,
+    quantity: 1,
+  },
+  {
+    id: 3,
+    img: destacadoImage03,
+    openligthbox: destacadoImage003,
+    nameProduct: "ESPINILLERAS MERCURIAL",
+    description: "Calidad premium",
+    price: 100,
+    quantity: 1,
+  },
+  {
+    id: 4,
+    img: destacadoImage04,
+    openligthbox: destacadoImage004,
+    nameProduct: "NIKE PHANTOM LUNA FG",
+    description: "Calidad premium",
+    price: 400,
+    quantity: 1,
+  },
   {
     id: 5,
     img: lmvImage01,

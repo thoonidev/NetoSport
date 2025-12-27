@@ -1,44 +1,34 @@
-import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Menu from "./components/Menu/Menu";
 import Inicio from "./Pages/Inicio";
 import Nosotros from "./Pages/Nosotros";
 import Productos from "./Pages/Productos";
 import Contacto from "./Pages/Contacto";
+import Carrito from "./Pages/Carrito";
+import DetalleProducto from "./Pages/DetalleProducto";
 import Footer from "./components/Footer/Footer";
+import { CartProvider } from "./CartContext";
 
 function App() {
-  const [allProducts, setAllProducts] = useState([]);
-  const [total, setTotal] = useState(0);
-  const [countProducts, setCountProducts] = useState(0);
-
+  
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<Inicio />} />
-          <Route
-            exact
-            path="/inicio"
-            element={
-              <Inicio
-                allProducts={allProducts}
-                setAllProducts={setAllProducts}
-                total={total}
-                countProducts={countProducts}
-                setCountProducts={setCountProducts}
-                setTotal={setTotal}
-              />
-            }
-          />
-
-          <Route exact path="/nosotros" element={<Nosotros />} />
-          <Route exact path="/productos" element={<Productos />} />
-          <Route exact path="/contacto" element={<Contacto />} />
-        </Routes>
-
-        <Footer />
-      </BrowserRouter>
-    </div>
+    <CartProvider>
+      <div className="App">
+        <BrowserRouter>
+          <Menu />
+          <Routes>
+            <Route exact path="/" element={<Inicio />} />
+            <Route exact path="/inicio" element={<Inicio />} />
+            <Route exact path="/nosotros" element={<Nosotros />} />
+            <Route exact path="/productos" element={<Productos />} />
+            <Route exact path="/contacto" element={<Contacto />} />
+            <Route exact path="/carrito" element={<Carrito />} />
+            <Route path="/producto/:id" element={<DetalleProducto />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </div>
+    </CartProvider>
   );
 }
 
