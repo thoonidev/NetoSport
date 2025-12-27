@@ -24,6 +24,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 /* Producto individual */
@@ -96,7 +98,7 @@
 
 /* Botón de vaciar carrito */
 .btn-clear-all {
-  background-color: #00b894;
+  background-color: #0066ff;
   color: white;
   border: none;
   padding: 12px 25px;
@@ -107,10 +109,32 @@
 }
 
 .btn-clear-all:hover {
-  background-color: #009c7a;
+  background-color: #1632d3;
 }
 
-/* Carrito vacío */
+/* Contenedor de botones */
+.carrito-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Botón de finalizar compra */
+.btn-finalizar {
+  background-color: #a537ff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.btn-finalizar:hover {
+  background-color: #a200ff;
+}
 .cart-empty {
   text-align: center;
   font-size: 1.2rem;

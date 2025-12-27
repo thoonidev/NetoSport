@@ -36,9 +36,14 @@ const Carrito = () => {
           </div>
           <div className="carrito-total">
             <h3>TOTAL: S/.{total}</h3>
-            <button className="btn-clear-all" onClick={onCleanCart}>
-              Vaciar Carrito
-            </button>
+            <div className="carrito-buttons">
+              <button className="btn-clear-all" onClick={onCleanCart}>
+                Vaciar Carrito
+              </button>
+              <button className="btn-finalizar" onClick={() => { onCleanCart(); alert('Compra exitosa'); }}>
+                Finalizar Compra
+              </button>
+            </div>
           </div>
         </>
       ) : (
