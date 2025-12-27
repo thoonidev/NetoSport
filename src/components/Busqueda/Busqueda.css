@@ -5,8 +5,8 @@
   margin: 5rem auto 2rem;
   display: flex;
   align-items: center;
-  background-color: #0a0a0a; /* fondo oscuro profesional */
-  border: 2px solid #14c6d3; /* borde vibrante deportivo */
+  background-color: #0a0a0a; 
+  border: 2px solid #14c6d3; 
   border-radius: 50px;
   padding: 10px 20px;
   box-shadow: 0 4px 15px rgba(20, 198, 211, 0.5);
@@ -14,8 +14,8 @@
 }
 
 .busqueda:hover {
-  box-shadow: 0 6px 20px rgba(61, 224, 148, 0.6); /* efecto hover */
-  border-color: #5fcca2; /* cambio de color al pasar el mouse */
+  box-shadow: 0 6px 20px rgba(61, 224, 148, 0.6); 
+  border-color: #5fcca2;
 }
 
 /* Icono de búsqueda */
