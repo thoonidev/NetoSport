@@ -61,7 +61,7 @@ El enfoque principal es proporcionar una plataforma moderna y funcional para pre
 
 ## 🎨 Vista del proyecto
 
-<img width="722" height="372" alt="netoSport" src="https://github.com/user-attachments/assets/abec721a-214e-40f0-ae9e-b86cca61132c" />
+<img width="722" height="372" alt="netoSport" src="https://github.com/user-attachments/assets/be95c890-90ef-4bac-8a72-96c7f436bdfb" />
 
 ---
 
