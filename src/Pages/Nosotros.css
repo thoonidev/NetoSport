@@ -1,0 +1,228 @@
+.ns-about-cover {
+  position: relative;
+  height: 440px;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #1d2317;
+}
+.ns-about-cover:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #0a1109db, transparent 80%);
+}
+.ns-about-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+  filter: saturate(0.65);
+}
+.ns-about-cover > span {
+  position: absolute;
+  z-index: 1;
+  bottom: 65px;
+  left: 40px;
+  font-size: clamp(26px, 4.2vw, 57px);
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+.ns-about-cover > p {
+  position: absolute;
+  bottom: 35px;
+  left: 40px;
+  z-index: 1;
+  color: var(--ns-lime);
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+.ns-about-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  padding: 75px 0 65px;
+}
+.ns-about-page h2 {
+  font-size: clamp(30px, 3.3vw, 44px);
+  letter-spacing: -1.8px;
+  line-height: 1.12;
+}
+.ns-about-story > div + div > p {
+  font-size: 14px;
+  color: #b4bfa7;
+  line-height: 1.95;
+  margin-bottom: 20px;
+}
+.ns-about-story .ns-button {
+  margin-top: 8px;
+}
+.ns-about-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.ns-about-values article {
+  padding: 32px;
+  border: 1px solid #38432c;
+  border-radius: 6px;
+  background: #191e14;
+}
+.ns-about-values article > span {
+  color: var(--ns-lime);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+.ns-about-values h3 {
+  font-size: 21px;
+  letter-spacing: -0.7px;
+  margin-top: 30px;
+}
+.ns-about-values article > p {
+  font-size: 12px;
+  line-height: 1.95;
+  color: #a9b69a;
+  margin-top: 15px;
+}
+.ns-about-manifesto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  margin-top: 75px;
+}
+.ns-about-night {
+  height: 560px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.ns-about-night img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.7);
+}
+.ns-about-manifesto > div + div > p:not(.ns-kicker) {
+  font-size: 13px;
+  line-height: 1.95;
+  color: #aebc9d;
+  margin: 23px 0;
+}
+.ns-about-manifesto .ns-vision-label {
+  margin-top: 35px;
+}
+.ns-about-manifesto .ns-button {
+  margin-top: 5px;
+}
+.ns-about-closing {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 310px;
+  border: 1px solid #3a4a28;
+  border-radius: 7px;
+  overflow: hidden;
+  margin-top: 75px;
+  background: #101710;
+  isolation: isolate;
+}
+.ns-about-closing > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  filter: saturate(0.6);
+  z-index: -2;
+}
+.ns-about-closing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 14, 7, 0.9),
+    rgba(7, 14, 7, 0.6) 55%,
+    rgba(7, 14, 7, 0.25)
+  );
+  z-index: -1;
+}
+.ns-about-closing > div {
+  padding: 45px;
+  max-width: 650px;
+}
+.ns-about-closing h2 {
+  font-size: 34px;
+}
+.ns-about-closing a {
+  display: inline-block;
+  color: var(--ns-lime);
+  font-size: 12px;
+  margin-top: 23px;
+}
+@media (max-width: 900px) {
+  .ns-about-story,
+  .ns-about-manifesto {
+    gap: 35px;
+  }
+  .ns-about-values article {
+    padding: 24px;
+  }
+  .ns-about-values h3 {
+    font-size: 18px;
+  }
+  .ns-about-night {
+    height: 520px;
+  }
+}
+@media (max-width: 600px) {
+  .ns-about-cover {
+    height: 310px;
+  }
+  .ns-about-cover > span {
+    left: 22px;
+    right: 20px;
+    bottom: 65px;
+    font-size: 32px;
+    line-height: 1;
+  }
+  .ns-about-cover > p {
+    left: 22px;
+    font-size: 8px;
+  }
+  .ns-about-story {
+    grid-template-columns: 1fr;
+    padding: 45px 0;
+    gap: 24px;
+  }
+  .ns-about-values {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .ns-about-values h3 {
+    margin-top: 20px;
+    font-size: 23px;
+  }
+  .ns-about-manifesto {
+    grid-template-columns: 1fr;
+    margin-top: 45px;
+    gap: 32px;
+  }
+  .ns-about-night {
+    height: 400px;
+  }
+  .ns-about-closing {
+    min-height: 280px;
+    margin-top: 45px;
+  }
+  .ns-about-closing > img {
+    height: 100%;
+    object-position: 60% center;
+  }
+  .ns-about-closing > div {
+    padding: 28px 24px;
+  }
+  .ns-about-closing h2 {
+    font-size: 30px;
+  }
+}

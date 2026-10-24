@@ -1,0 +1,151 @@
+.ns-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #101110;
+  color: #fff;
+  border-bottom: 1px solid #2c2e29;
+}
+.ns-announcement {
+  text-align: center;
+  background: var(--ns-lime);
+  color: #131610;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  padding: 9px 15px;
+}
+.ns-nav-inner {
+  max-width: 1280px;
+  padding: 20px 32px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+.ns-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.ns-brand img {
+  object-fit: contain;
+}
+.ns-brand > span > span {
+  color: var(--ns-lime);
+}
+.ns-brand small {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #a4a79e;
+  margin-top: 8px;
+}
+.ns-navigation {
+  display: flex;
+  gap: 32px;
+}
+.ns-navigation a {
+  font-size: 13px;
+  font-weight: 700;
+  color: #bcbfb7;
+  text-decoration: none;
+  padding: 10px 0;
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+.ns-navigation a:hover,
+.ns-navigation a.active {
+  color: #fff;
+  border-color: var(--ns-lime);
+}
+.ns-nav-actions {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.ns-cart {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+.ns-cart span {
+  background: var(--ns-lime);
+  color: #101110;
+  border-radius: 50%;
+  min-width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 800;
+}
+.ns-menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid #505349;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+.ns-skip {
+  position: absolute;
+  left: 12px;
+  top: -100px;
+  background: #fff;
+  color: #111;
+  padding: 12px;
+}
+.ns-skip:focus {
+  top: 0;
+  z-index: 30;
+}
+@media (max-width: 700px) {
+  .ns-nav-inner {
+    padding: 16px 20px;
+    gap: 12px;
+  }
+  .ns-brand {
+    font-size: 19px;
+  }
+  .ns-brand img {
+    width: 38px;
+    height: 38px;
+  }
+  .ns-menu-toggle {
+    display: block;
+  }
+  .ns-navigation {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #151612;
+    padding: 20px;
+    box-shadow: 0 20px 30px #0006;
+  }
+  .ns-navigation.is-open {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .ns-navigation a {
+    padding: 13px;
+  }
+  .ns-announcement {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+}

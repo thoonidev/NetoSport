@@ -1,0 +1,23 @@
+.ns-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 16px 23px;
+  border: 1px solid transparent;
+  border-radius: var(--ns-radius);
+  background: var(--ns-lime);
+  color: #11150b;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.ns-button:hover {
+  background: #d6ff52;
+  transform: translateY(-2px);
+}

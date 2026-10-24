@@ -1,0 +1,224 @@
+.ns-cart-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+.ns-cart-list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 22px;
+  gap: 15px;
+  border-bottom: 1px solid var(--ns-line);
+}
+.ns-cart-list-heading h2 {
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+.ns-cart-list-heading h2 > span {
+  color: #8e9c7c;
+  font-size: 13px;
+  font-weight: 400;
+  margin-left: 5px;
+}
+.ns-subtle-button {
+  color: #9eac8d;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 11px;
+  padding: 10px 0;
+}
+.ns-subtle-button:hover {
+  color: var(--ns-lime);
+}
+.ns-cart-item {
+  display: grid;
+  grid-template-columns: 125px minmax(0, 1fr) auto;
+  gap: 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--ns-line);
+}
+.ns-cart-item-photo {
+  display: block;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #1c2217;
+}
+.ns-cart-item-photo img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  display: block;
+}
+.ns-cart-item-info {
+  min-width: 0;
+}
+.ns-inner-page .ns-cart-item-info > p {
+  font-size: 9px;
+  color: #8e9e7b;
+  margin: 4px 0 9px;
+}
+.ns-cart-item-info h3 {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.ns-cart-item-info h3 a {
+  color: #e8efde;
+}
+.ns-cart-item-info > span {
+  display: block;
+  margin: 12px 0 16px;
+  font-size: 11px;
+  color: #aab69c;
+}
+.ns-cart-item-info .ns-quantity button {
+  width: 35px;
+  height: 36px;
+}
+.ns-cart-item-info .ns-quantity > span {
+  min-width: 23px;
+}
+.ns-cart-item-end {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 15px;
+}
+.ns-cart-item-end > strong {
+  font-size: 15px;
+  white-space: nowrap;
+  margin-bottom: 4px;
+}
+.ns-remove-item {
+  border: 1px solid #3d4732;
+  border-radius: 50%;
+  background: transparent;
+  color: #c0cbb2;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+.ns-remove-item:hover {
+  color: #fff;
+  border-color: #91a078;
+}
+.ns-back-link {
+  color: #c6d1b7;
+  display: inline-block;
+  font-size: 12px;
+  padding: 25px 0;
+}
+.ns-order-summary {
+  background: #191e15;
+  border: 1px solid #3b462f;
+  border-radius: 7px;
+  padding: 30px;
+  position: sticky;
+  top: 25px;
+}
+.ns-order-summary h2 {
+  font-size: 22px;
+  letter-spacing: -0.7px;
+  line-height: 1.3;
+}
+.ns-order-summary dl {
+  margin: 30px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #3a462d;
+}
+.ns-order-summary dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 20px 0;
+  font-size: 12px;
+}
+.ns-order-summary dt {
+  color: #a5b094;
+}
+.ns-order-summary dd {
+  margin: 0;
+  text-align: right;
+}
+.ns-order-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 28px;
+}
+.ns-order-total > span {
+  font-size: 12px;
+}
+.ns-order-total > strong {
+  font-size: 27px;
+  color: var(--ns-lime);
+  white-space: nowrap;
+}
+.ns-order-summary > .ns-button {
+  width: 100%;
+  font-size: 12px;
+  gap: 8px;
+}
+.ns-inner-page .ns-summary-note {
+  color: #a7b495;
+  font-size: 10px;
+  line-height: 1.9;
+  margin-top: 17px;
+}
+@media (max-width: 1000px) {
+  .ns-cart-layout {
+    gap: 30px;
+    grid-template-columns: 1.3fr 1fr;
+  }
+  .ns-cart-item {
+    grid-template-columns: 90px minmax(0, 1fr) auto;
+    gap: 15px;
+  }
+  .ns-order-summary {
+    padding: 23px;
+  }
+  .ns-order-total > strong {
+    font-size: 22px;
+  }
+}
+@media (max-width: 800px) {
+  .ns-cart-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .ns-order-summary {
+    position: static;
+  }
+}
+@media (max-width: 450px) {
+  .ns-cart-item {
+    grid-template-columns: 80px minmax(0, 1fr) 35px;
+    gap: 12px;
+    position: relative;
+    padding: 22px 0 46px;
+  }
+  .ns-cart-item-info h3 {
+    font-size: 12px;
+  }
+  .ns-cart-item-info > span {
+    font-size: 10px;
+  }
+  .ns-cart-item-end > strong {
+    position: absolute;
+    bottom: 16px;
+    right: 0;
+    font-size: 13px;
+  }
+  .ns-remove-item {
+    width: 32px;
+    height: 32px;
+  }
+  .ns-cart-list-heading h2 {
+    font-size: 16px;
+  }
+}

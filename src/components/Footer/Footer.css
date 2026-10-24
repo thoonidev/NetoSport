@@ -1,0 +1,79 @@
+.ns-footer {
+  background: #0c0d0b;
+  color: #a5a99f;
+  border-top: 1px solid #2c2e29;
+  padding: 65px 32px 0;
+  font-size: 13px;
+}
+.ns-footer-inner {
+  max-width: 1216px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.3fr 1fr;
+  gap: 36px;
+}
+.ns-footer h2 {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #fff;
+  margin: 0 0 24px;
+}
+.ns-footer a {
+  display: block;
+  color: #a5a99f;
+  text-decoration: none;
+  margin-bottom: 14px;
+  overflow-wrap: anywhere;
+}
+.ns-footer a:hover {
+  color: var(--ns-lime);
+}
+.ns-footer p {
+  line-height: 1.8;
+  margin: 0 0 14px;
+}
+.ns-footer .ns-footer-brand > a {
+  font-size: 28px;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+.ns-footer-brand > a span {
+  color: var(--ns-lime);
+}
+.ns-footer-label {
+  font-size: 9px;
+  letter-spacing: 1.8px;
+}
+.ns-footer-bottom {
+  max-width: 1216px;
+  margin: 50px auto 0;
+  border-top: 1px solid #2c2e29;
+  padding: 23px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  font-size: 10px;
+}
+.ns-footer-bottom > span + span {
+  letter-spacing: 2px;
+}
+@media (max-width: 800px) {
+  .ns-footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ns-footer {
+    padding: 45px 20px 0;
+  }
+}
+@media (max-width: 480px) {
+  .ns-footer-inner {
+    grid-template-columns: 1fr;
+  }
+  .ns-footer-bottom {
+    flex-direction: column;
+  }
+  .ns-footer h2 {
+    margin-bottom: 18px;
+  }
+}
